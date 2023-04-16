@@ -26,8 +26,8 @@ class TPQueue {
       } else {
         int i = last;
           for ( ; i != first; --i) {
-            if (arr[i - 1].prior < value.prior) {
-            arr[i] = arr[i - 1];
+            if (arr[(i - 1) % size].prior < value.prior) {
+            arr[i % size] = arr[(i - 1) % size];
           } else {
             break;
           }
